@@ -6,18 +6,22 @@
 //
 
 import UIKit
-import Glideshow
+import SwiftUI
+//import Glideshow
 
 class ViewController: UIViewController {
-    let glideshow = Glideshow()
-    let button = UIButton(type: .system)
+//    let glideshow = Glideshow()
+//    let button = UIButton(type: .system)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupUI()
+//        setupUI()
     }
 
-    override func viewDidLayoutSubviews() {
+    @IBSegueAction func embededSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: SwiftUIHomeView())
+    }
+    /* override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
         glideshow.frame = CGRect(x: 0, y: 0, width:self.view.frame.width, height: self.view.frame.height - 50)
             button.frame = CGRect(x: 0, y: 0, width:self.view.frame.width, height: 50)
@@ -55,10 +59,10 @@ class ViewController: UIViewController {
         @objc func goToSlide(){
             glideshow.jumpToSlide(3, true)
             
-        }
+        }*/
     }
 
-    extension ViewController : GlideshowProtocol {
+  /*  extension ViewController : GlideshowProtocol {
         func glideshowDidSelecteRowAt(indexPath: IndexPath, _ glideshow: Glideshow) {
             print(indexPath)
         }
@@ -66,6 +70,6 @@ class ViewController: UIViewController {
         func pageDidChange(_ glideshow: Glideshow, didChangePageTo page: Int) {
             print(page)
         }
-    }
+    }*/
 
 

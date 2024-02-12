@@ -16,7 +16,7 @@
 		170FCE212848E73E00D34424 /* ArbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170FCE202848E73E00D34424 /* ArbTests.swift */; };
 		170FCE2B2848E73E00D34424 /* ArbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170FCE2A2848E73E00D34424 /* ArbUITests.swift */; };
 		170FCE2D2848E73E00D34424 /* ArbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170FCE2C2848E73E00D34424 /* ArbUITestsLaunchTests.swift */; };
-		170FCE3B2848E91900D34424 /* Glideshow in Frameworks */ = {isa = PBXBuildFile; productRef = 170FCE3A2848E91900D34424 /* Glideshow */; };
+		1914B1972B7A290400DA98B4 /* SwiftUIHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914B1962B7A290400DA98B4 /* SwiftUIHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,7 @@
 		170FCE262848E73E00D34424 /* ArbOffcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArbOffcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		170FCE2A2848E73E00D34424 /* ArbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbUITests.swift; sourceTree = "<group>"; };
 		170FCE2C2848E73E00D34424 /* ArbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1914B1962B7A290400DA98B4 /* SwiftUIHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170FCE3B2848E91900D34424 /* Glideshow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +108,7 @@
 				170FCE122848E73E00D34424 /* Assets.xcassets */,
 				170FCE142848E73E00D34424 /* LaunchScreen.storyboard */,
 				170FCE172848E73E00D34424 /* Info.plist */,
+				1914B1962B7A290400DA98B4 /* SwiftUIHomeView.swift */,
 			);
 			path = Arb;
 			sourceTree = "<group>";
@@ -146,7 +147,6 @@
 			);
 			name = ArbOffc;
 			packageProductDependencies = (
-				170FCE3A2848E91900D34424 /* Glideshow */,
 			);
 			productName = Arb;
 			productReference = 170FCE062848E73B00D34424 /* ArbOffc.app */;
@@ -221,7 +221,6 @@
 			);
 			mainGroup = 170FCDFD2848E73B00D34424;
 			packageReferences = (
-				170FCE392848E91900D34424 /* XCRemoteSwiftPackageReference "Glideshow" */,
 			);
 			productRefGroup = 170FCE072848E73B00D34424 /* Products */;
 			projectDirPath = "";
@@ -269,6 +268,7 @@
 				170FCE0E2848E73B00D34424 /* ViewController.swift in Sources */,
 				170FCE0A2848E73B00D34424 /* AppDelegate.swift in Sources */,
 				170FCE0C2848E73B00D34424 /* SceneDelegate.swift in Sources */,
+				1914B1972B7A290400DA98B4 /* SwiftUIHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 9M2U5RK3QT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arb/Info.plist;
@@ -458,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.arb.ArbOfc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -473,7 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 9M2U5RK3QT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arb/Info.plist;
@@ -487,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.arb.ArbOfc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -612,25 +612,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		170FCE392848E91900D34424 /* XCRemoteSwiftPackageReference "Glideshow" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/v15a1/Glideshow";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		170FCE3A2848E91900D34424 /* Glideshow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 170FCE392848E91900D34424 /* XCRemoteSwiftPackageReference "Glideshow" */;
-			productName = Glideshow;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 170FCDFE2848E73B00D34424 /* Project object */;
 }
