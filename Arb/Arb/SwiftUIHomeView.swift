@@ -11,6 +11,7 @@ struct SwiftUIHomeView: View {
     let images = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10"] // Sample image names
     
     @State private var selectedIndex = 0
+    let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect() // Change every 2 seconds
     
     var body: some View {
         VStack {
@@ -50,6 +51,10 @@ struct SwiftUIHomeView: View {
             // Display selected image below indicator
 //            Text("Selected Image: \(images[selectedIndex])").padding()
         }
+        .onReceive(timer) { _ in
+                   let nextIndex = (selectedIndex + 1) % images.count
+                   selectedIndex = nextIndex
+               }
     }
 }
 
